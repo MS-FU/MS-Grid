@@ -17,6 +17,9 @@
  *
  */
 
+require("jquery");
+require("jquery.event.drag");
+
 var Slick = require("./slick.core.js");
 
 // make sure required JavaScript modules are loaded

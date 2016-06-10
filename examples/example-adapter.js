@@ -1,1 +1,1 @@
-window.Slick = require("../index.js");
+window.Slick = require("../main.js");
