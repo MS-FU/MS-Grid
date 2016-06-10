@@ -8,6 +8,7 @@
   },
   "keywords": [],
   "author": "Ben McIntyre",
+  "main": "./build/ms.grid.js",
   "contributors": [
     {
       "name": "Fredy Urrego",
@@ -24,6 +25,7 @@
   ],
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.0.0",
     "jquery.event.drag": "^2.2.2"
   }
 }
