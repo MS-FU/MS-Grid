@@ -4,7 +4,7 @@
   "description": "Forked repository for Slick Grid",
   "private": true,
   "scripts": {
-    "build": "browserify ./index.js > ./build/ms.grid.js && browserify ./examples/example-adapter.js > ./examples/app.js"
+    "build": "browserify ./main.js > ./build/ms.grid.js && browserify ./examples/example-adapter.js > ./examples/app.js"
   },
   "keywords": [],
   "author": "Ben McIntyre",
