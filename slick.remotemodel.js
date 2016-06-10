@@ -1,4 +1,4 @@
-(function ($) {
+function SlickGridRemoteModel ($) {
   /***
    * A sample AJAX data store implementation.
    * Right now, it's hooked up to load search results from Octopart, but can
@@ -165,5 +165,7 @@
   }
 
   // Slick.Data.RemoteModel
-  $.extend(true, window, { Slick: { Data: { RemoteModel: RemoteModel }}});
-})(jQuery);
+  return RemoteModel;
+}
+
+module.exports = SlickGridRemoteModel(jQuery);

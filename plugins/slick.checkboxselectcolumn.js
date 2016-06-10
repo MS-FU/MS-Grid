@@ -1,10 +1,6 @@
-(function ($) {
+function CheckboxSelectColumnExport ($) {
   // register namespace
-  $.extend(true, window, {
-    "Slick": {
-      "CheckboxSelectColumn": CheckboxSelectColumn
-    }
-  });
+  return CheckboxSelectColumn;
 
 
   function CheckboxSelectColumn(options) {
@@ -150,4 +146,6 @@
       "getColumnDefinition": getColumnDefinition
     });
   }
-})(jQuery);
+}
+
+module.exports = CheckboxSelectColumnExport(jQuery);

@@ -1,4 +1,4 @@
-(function ($) {
+function SlickGridPagerExport ($) {
   function SlickGridPager(dataView, grid, $container) {
     var $status;
 
@@ -143,5 +143,7 @@
   }
 
   // Slick.Controls.Pager
-  $.extend(true, window, { Slick:{ Controls:{ Pager:SlickGridPager }}});
-})(jQuery);
+  return SlickGridPager;
+}
+
+module.exports = SlickGridPagerExport(jQuery);

@@ -17,6 +17,8 @@
  *
  */
 
+var Slick = require("./slick.core.js");
+
 // make sure required JavaScript modules are loaded
 if (typeof jQuery === "undefined") {
     throw "SlickGrid requires jquery module to be loaded";
@@ -28,17 +30,13 @@ if (typeof Slick === "undefined") {
     throw "slick.core.js not loaded";
 }
 
-(function ($) {
-    // Slick.Grid
-    $.extend(true, window, {
-        Slick: {
-            Grid: SlickGrid
-        }
-    });
-
+function SlickGridExport ($) {
     // shared across all grids on the page
     var scrollbarDimensions;
     var maxSupportedCssHeight; // browser's breaking point
+
+    // Slick.Grid
+    return SlickGrid;
 
     // ////////////////////////////////////////////////////////////////////////////////////////////
     // SlickGrid class implementation (available as Slick.Grid)
@@ -800,10 +798,10 @@ if (typeof Slick === "undefined") {
                         });
                     }
                 });
-                
+
             $headerRowL.empty();
             $headerRowR.empty();
-            
+
             for (var i = 0; i < columns.length; i++) {
                 var m = columns[i];
 
@@ -4302,4 +4300,6 @@ if (typeof Slick === "undefined") {
 
         init();
     }
-}(jQuery));
+}
+
+module.exports = SlickGridExport(jQuery);

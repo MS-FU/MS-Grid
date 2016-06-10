@@ -1,12 +1,6 @@
-(function ($) {
+function HeaderButtonsExport ($) {
   // register namespace
-  $.extend(true, window, {
-    "Slick": {
-      "Plugins": {
-        "HeaderButtons": HeaderButtons
-      }
-    }
-  });
+  return HeaderButtons;
 
 
   /***
@@ -174,4 +168,6 @@
       "onCommand": new Slick.Event()
     });
   }
-})(jQuery);
+}
+
+module.exports = HeaderButtonsExport(jQuery);

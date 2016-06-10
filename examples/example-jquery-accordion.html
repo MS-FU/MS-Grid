@@ -46,8 +46,7 @@
 <script src="../lib/jquery-ui-1.11.3.min.js"></script>
 <script src="../lib/jquery.event.drag-2.2.js"></script>
 
-<script src="../slick.core.js"></script>
-<script src="../slick.grid.js"></script>
+<script src="./app.js"></script>
 
 <script>
   var grid01, grid02;
@@ -85,7 +84,7 @@
     }
 	return data;
   }
-  
+
   $(function () {
     $( "#accordion" ).accordion(
 	// Workaround for IE 7-9 issue where div is blank after switching panels - need to destroy and recreate grid
@@ -99,7 +98,7 @@
 	//		}
 	//	}
 	//}
-	);	
+	);
 
     var data01 = CreateData();
     grid01 = new Slick.Grid("#myGrid01", data01, columns, options);
