@@ -1,4 +1,4 @@
-function SlickGridGroupItemMetadataProvider ($) {
+function SlickGridGroupItemMetadataProvider ($, Slick) {
   return GroupItemMetadataProvider;
 
 

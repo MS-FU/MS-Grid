@@ -1,4 +1,4 @@
-function CheckboxSelectColumnExport ($) {
+function CheckboxSelectColumnExport ($, Slick) {
   // register namespace
   return CheckboxSelectColumn;
 

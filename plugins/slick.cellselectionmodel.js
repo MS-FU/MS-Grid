@@ -1,4 +1,4 @@
-function CellSelectionModelExport ($) {
+function CellSelectionModelExport ($, Slick) {
   // register namespace
   return CellSelectionModel;
 

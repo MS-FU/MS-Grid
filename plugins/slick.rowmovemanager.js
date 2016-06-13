@@ -1,4 +1,4 @@
-function RowMoveManagerExport ($) {
+function RowMoveManagerExport ($, Slick) {
   // register namespace
   return RowMoveManager;
 

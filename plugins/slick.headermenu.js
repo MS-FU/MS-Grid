@@ -1,4 +1,4 @@
-function HeaderMenuExport ($) {
+function HeaderMenuExport ($, Slick) {
   // register namespace
   return HeaderMenu;
 

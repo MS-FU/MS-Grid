@@ -1,4 +1,4 @@
-function CellRangeSelectorExport ($) {
+function CellRangeSelectorExport ($, Slick) {
   // register namespace
   return CellRangeSelector;
 

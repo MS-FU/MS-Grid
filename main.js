@@ -7,9 +7,9 @@ module.exports = jQuery.extend(Slick, {
   Grid: require("./slick.grid.js")(jQuery, Slick),
   Data: jQuery.extend(
     require("./slick.dataView.js")(jQuery), {
-      GroupItemMetadataProvider: require("./slick.groupitemmetadataprovider.js")(jQuery),
-      RemoteModelYahoo: require("./slick.remotemodel-yahoo.js")(jQuery),
-      RemoteModel: require("./slick.remotemodel.js")(jQuery)
+      GroupItemMetadataProvider: require("./slick.groupitemmetadataprovider.js")(jQuery, Slick),
+      RemoteModelYahoo: require("./slick.remotemodel-yahoo.js")(jQuery, Slick),
+      RemoteModel: require("./slick.remotemodel.js")(jQuery, Slick)
     }
   ),
   Editors: require("./slick.editors.js")(jQuery),
@@ -17,16 +17,16 @@ module.exports = jQuery.extend(Slick, {
 
   // Plugins
   AutoTooltips: require("./plugins/slick.autotooltips.js")(jQuery),
-  CellCopyManager: require("./plugins/slick.cellcopymanager.js")(jQuery),
-  CellRangeDecorator: require("./plugins/slick.cellrangedecorator.js")(jQuery),
+  CellCopyManager: require("./plugins/slick.cellcopymanager.js")(jQuery, Slick),
+  CellRangeDecorator: require("./plugins/slick.cellrangedecorator.js")(jQuery, Slick),
   CellRangeSelector: require("./plugins/slick.cellrangeselector.js")(jQuery),
-  CellSelectionModel: require("./plugins/slick.cellselectionmodel.js")(jQuery),
-  CheckboxSelectColumn: require("./plugins/slick.checkboxselectcolumn.js")(jQuery),
-  RowMoveManager: require("./plugins/slick.rowmovemanager.js")(jQuery),
-  RowSelectionModel: require("./plugins/slick.rowselectionmodel.js")(jQuery),
+  CellSelectionModel: require("./plugins/slick.cellselectionmodel.js")(jQuery, Slick),
+  CheckboxSelectColumn: require("./plugins/slick.checkboxselectcolumn.js")(jQuery, Slick),
+  RowMoveManager: require("./plugins/slick.rowmovemanager.js")(jQuery, Slick),
+  RowSelectionModel: require("./plugins/slick.rowselectionmodel.js")(jQuery, Slick),
   "Plugins": {
-    "HeaderButtons": require("./plugins/slick.headerbuttons.js")(jQuery),
-    "HeaderMenu": require("./plugins/slick.headermenu.js")(jQuery)
+    "HeaderButtons": require("./plugins/slick.headerbuttons.js")(jQuery, Slick),
+    "HeaderMenu": require("./plugins/slick.headermenu.js")(jQuery, Slick)
   },
 
   // Controls

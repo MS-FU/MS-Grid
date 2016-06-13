@@ -1,4 +1,4 @@
-function SlickGridRemoteModel ($) {
+function SlickGridRemoteModel ($, Slick) {
   /***
    * A sample AJAX data store implementation.
    * Right now, it's hooked up to load Hackernews stories, but can

@@ -1,4 +1,4 @@
-function SlickGridPagerExport ($) {
+function SlickGridPagerExport ($, Slick) {
   function SlickGridPager(dataView, grid, $container) {
     var $status;
 

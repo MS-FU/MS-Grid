@@ -1,4 +1,4 @@
-function HeaderButtonsExport ($) {
+function HeaderButtonsExport ($, Slick) {
   // register namespace
   return HeaderButtons;
 

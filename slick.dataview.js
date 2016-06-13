@@ -1,4 +1,4 @@
-function SlickGridData ($) {
+function SlickGridData ($, Slick) {
   return {
     DataView: DataView,
     Aggregators: {

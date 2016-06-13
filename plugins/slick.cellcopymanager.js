@@ -1,4 +1,4 @@
-function CellCopyManagerExport ($) {
+function CellCopyManagerExport ($, Slick) {
   // register namespace
   return CellCopyManager;
 
