@@ -28297,43 +28297,6 @@ module.exports = RowSelectionModelExport;
  */
 
 function SlickGridCore ($) {
-  // register namespace
-  return {
-    "Event": Event,
-    "EventData": EventData,
-    "EventHandler": EventHandler,
-    "Range": Range,
-    "NonDataRow": NonDataItem,
-    "Group": Group,
-    "GroupTotals": GroupTotals,
-    "EditorLock": EditorLock,
-
-    /***
-     * A global singleton editor lock.
-     * @class GlobalEditorLock
-     * @static
-     * @constructor
-     */
-    "GlobalEditorLock": new EditorLock(),
-
-    "keyCode": {
-      BACKSPACE: 8,
-      DELETE: 46,
-      DOWN: 40,
-      END: 35,
-      ENTER: 13,
-      ESCAPE: 27,
-      HOME: 36,
-      INSERT: 45,
-      LEFT: 37,
-      PAGE_DOWN: 34,
-      PAGE_UP: 33,
-      RIGHT: 39,
-      TAB: 9,
-      UP: 38
-    }
-  };
-
   /***
    * An event object for passing data to event handlers and letting them control propagation.
    * <p>This is pretty much identical to how W3C and jQuery implement events.</p>
@@ -28769,23 +28732,49 @@ function SlickGridCore ($) {
       return (activeEditController ? activeEditController.cancelCurrentEdit() : true);
     };
   }
+
+  // register namespace
+  return {
+    "Event": Event,
+    "EventData": EventData,
+    "EventHandler": EventHandler,
+    "Range": Range,
+    "NonDataRow": NonDataItem,
+    "Group": Group,
+    "GroupTotals": GroupTotals,
+    "EditorLock": EditorLock,
+
+    /***
+     * A global singleton editor lock.
+     * @class GlobalEditorLock
+     * @static
+     * @constructor
+     */
+    "GlobalEditorLock": new EditorLock(),
+
+    "keyCode": {
+      BACKSPACE: 8,
+      DELETE: 46,
+      DOWN: 40,
+      END: 35,
+      ENTER: 13,
+      ESCAPE: 27,
+      HOME: 36,
+      INSERT: 45,
+      LEFT: 37,
+      PAGE_DOWN: 34,
+      PAGE_UP: 33,
+      RIGHT: 39,
+      TAB: 9,
+      UP: 38
+    }
+  };
 }
 
 module.exports = SlickGridCore;
 
 },{}],20:[function(require,module,exports){
 function SlickGridData ($, Slick) {
-  return {
-    DataView: DataView,
-    Aggregators: {
-      Avg: AvgAggregator,
-      Min: MinAggregator,
-      Max: MaxAggregator,
-      Sum: SumAggregator
-    }
-  };
-
-
   /***
    * A sample Model implementation.
    * Provides a filtered view of the underlying data.
@@ -29907,6 +29896,16 @@ function SlickGridData ($, Slick) {
     };
   }
 
+  return {
+    DataView: DataView,
+    Aggregators: {
+      Avg: AvgAggregator,
+      Min: MinAggregator,
+      Max: MaxAggregator,
+      Sum: SumAggregator
+    }
+  };
+
   // TODO:  add more built-in aggregators
   // TODO:  merge common aggregators in one to prevent needles iterating
 
@@ -29922,17 +29921,6 @@ module.exports = SlickGridData;
  */
 
 function SlickGridEditors ($) {
-  // register namespace
-  return {
-    "Text": TextEditor,
-    "Integer": IntegerEditor,
-		"Float": FloatEditor,
-    "Date": DateEditor,
-    "YesNoSelect": YesNoSelectEditor,
-    "Checkbox": CheckboxEditor,
-    "PercentComplete": PercentCompleteEditor,
-    "LongText": LongTextEditor
-  };
 
   function TextEditor(args) {
     var $input;
@@ -30541,6 +30529,18 @@ function SlickGridEditors ($) {
 
     this.init();
   }
+
+  // register namespace
+  return {
+    "Text": TextEditor,
+    "Integer": IntegerEditor,
+		"Float": FloatEditor,
+    "Date": DateEditor,
+    "YesNoSelect": YesNoSelectEditor,
+    "Checkbox": CheckboxEditor,
+    "PercentComplete": PercentCompleteEditor,
+    "LongText": LongTextEditor
+  };
 }
 
 module.exports = SlickGridEditors;

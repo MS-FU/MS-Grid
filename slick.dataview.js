@@ -1,15 +1,4 @@
 function SlickGridData ($, Slick) {
-  return {
-    DataView: DataView,
-    Aggregators: {
-      Avg: AvgAggregator,
-      Min: MinAggregator,
-      Max: MaxAggregator,
-      Sum: SumAggregator
-    }
-  };
-
-
   /***
    * A sample Model implementation.
    * Provides a filtered view of the underlying data.
@@ -1130,6 +1119,16 @@ function SlickGridData ($, Slick) {
       groupTotals.sum[this.field_] = this.sum_;
     };
   }
+
+  return {
+    DataView: DataView,
+    Aggregators: {
+      Avg: AvgAggregator,
+      Min: MinAggregator,
+      Max: MaxAggregator,
+      Sum: SumAggregator
+    }
+  };
 
   // TODO:  add more built-in aggregators
   // TODO:  merge common aggregators in one to prevent needles iterating

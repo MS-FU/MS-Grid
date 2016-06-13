@@ -5,17 +5,6 @@
  */
 
 function SlickGridEditors ($) {
-  // register namespace
-  return {
-    "Text": TextEditor,
-    "Integer": IntegerEditor,
-		"Float": FloatEditor,
-    "Date": DateEditor,
-    "YesNoSelect": YesNoSelectEditor,
-    "Checkbox": CheckboxEditor,
-    "PercentComplete": PercentCompleteEditor,
-    "LongText": LongTextEditor
-  };
 
   function TextEditor(args) {
     var $input;
@@ -624,6 +613,18 @@ function SlickGridEditors ($) {
 
     this.init();
   }
+
+  // register namespace
+  return {
+    "Text": TextEditor,
+    "Integer": IntegerEditor,
+		"Float": FloatEditor,
+    "Date": DateEditor,
+    "YesNoSelect": YesNoSelectEditor,
+    "Checkbox": CheckboxEditor,
+    "PercentComplete": PercentCompleteEditor,
+    "LongText": LongTextEditor
+  };
 }
 
 module.exports = SlickGridEditors;
