@@ -6,7 +6,7 @@ var Slick = require("./slick.core.js")(jQuery);
 module.exports = jQuery.extend(Slick, {
   Grid: require("./slick.grid.js")(jQuery, Slick),
   Data: jQuery.extend(
-    require("./slick.dataView.js")(jQuery), {
+    require("./slick.dataView.js")(jQuery, Slick), {
       GroupItemMetadataProvider: require("./slick.groupitemmetadataprovider.js")(jQuery, Slick),
       RemoteModelYahoo: require("./slick.remotemodel-yahoo.js")(jQuery, Slick),
       RemoteModel: require("./slick.remotemodel.js")(jQuery, Slick)

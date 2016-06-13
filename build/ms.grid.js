@@ -155,7 +155,7 @@ function SlickColumnPickerExport ($) {
 module.exports = SlickColumnPickerExport;
 
 },{}],2:[function(require,module,exports){
-function SlickGridPagerExport ($) {
+function SlickGridPagerExport ($, Slick) {
   function SlickGridPager(dataView, grid, $container) {
     var $status;
 
@@ -314,10 +314,10 @@ var Slick = require("./slick.core.js")(jQuery);
 module.exports = jQuery.extend(Slick, {
   Grid: require("./slick.grid.js")(jQuery, Slick),
   Data: jQuery.extend(
-    require("./slick.dataView.js")(jQuery), {
-      GroupItemMetadataProvider: require("./slick.groupitemmetadataprovider.js")(jQuery),
-      RemoteModelYahoo: require("./slick.remotemodel-yahoo.js")(jQuery),
-      RemoteModel: require("./slick.remotemodel.js")(jQuery)
+    require("./slick.dataView.js")(jQuery, Slick), {
+      GroupItemMetadataProvider: require("./slick.groupitemmetadataprovider.js")(jQuery, Slick),
+      RemoteModelYahoo: require("./slick.remotemodel-yahoo.js")(jQuery, Slick),
+      RemoteModel: require("./slick.remotemodel.js")(jQuery, Slick)
     }
   ),
   Editors: require("./slick.editors.js")(jQuery),
@@ -325,16 +325,16 @@ module.exports = jQuery.extend(Slick, {
 
   // Plugins
   AutoTooltips: require("./plugins/slick.autotooltips.js")(jQuery),
-  CellCopyManager: require("./plugins/slick.cellcopymanager.js")(jQuery),
-  CellRangeDecorator: require("./plugins/slick.cellrangedecorator.js")(jQuery),
+  CellCopyManager: require("./plugins/slick.cellcopymanager.js")(jQuery, Slick),
+  CellRangeDecorator: require("./plugins/slick.cellrangedecorator.js")(jQuery, Slick),
   CellRangeSelector: require("./plugins/slick.cellrangeselector.js")(jQuery),
-  CellSelectionModel: require("./plugins/slick.cellselectionmodel.js")(jQuery),
-  CheckboxSelectColumn: require("./plugins/slick.checkboxselectcolumn.js")(jQuery),
-  RowMoveManager: require("./plugins/slick.rowmovemanager.js")(jQuery),
-  RowSelectionModel: require("./plugins/slick.rowselectionmodel.js")(jQuery),
+  CellSelectionModel: require("./plugins/slick.cellselectionmodel.js")(jQuery, Slick),
+  CheckboxSelectColumn: require("./plugins/slick.checkboxselectcolumn.js")(jQuery, Slick),
+  RowMoveManager: require("./plugins/slick.rowmovemanager.js")(jQuery, Slick),
+  RowSelectionModel: require("./plugins/slick.rowselectionmodel.js")(jQuery, Slick),
   "Plugins": {
-    "HeaderButtons": require("./plugins/slick.headerbuttons.js")(jQuery),
-    "HeaderMenu": require("./plugins/slick.headermenu.js")(jQuery)
+    "HeaderButtons": require("./plugins/slick.headerbuttons.js")(jQuery, Slick),
+    "HeaderMenu": require("./plugins/slick.headermenu.js")(jQuery, Slick)
   },
 
   // Controls
@@ -26936,7 +26936,7 @@ function AutoTooltipsExport ($) {
 module.exports = AutoTooltipsExport;
 
 },{}],9:[function(require,module,exports){
-function CellCopyManagerExport ($) {
+function CellCopyManagerExport ($, Slick) {
   // register namespace
   return CellCopyManager;
 
@@ -27088,7 +27088,7 @@ function CellRangeDecoratorExport ($) {
 module.exports = CellRangeDecoratorExport;
 
 },{}],11:[function(require,module,exports){
-function CellRangeSelectorExport ($) {
+function CellRangeSelectorExport ($, Slick) {
   // register namespace
   return CellRangeSelector;
 
@@ -27201,7 +27201,7 @@ function CellRangeSelectorExport ($) {
 module.exports = CellRangeSelectorExport;
 
 },{}],12:[function(require,module,exports){
-function CellSelectionModelExport ($) {
+function CellSelectionModelExport ($, Slick) {
   // register namespace
   return CellSelectionModel;
 
@@ -27358,7 +27358,7 @@ function CellSelectionModelExport ($) {
 module.exports = CellSelectionModelExport;
 
 },{}],13:[function(require,module,exports){
-function CheckboxSelectColumnExport ($) {
+function CheckboxSelectColumnExport ($, Slick) {
   // register namespace
   return CheckboxSelectColumn;
 
@@ -27511,7 +27511,7 @@ function CheckboxSelectColumnExport ($) {
 module.exports = CheckboxSelectColumnExport;
 
 },{}],14:[function(require,module,exports){
-function HeaderButtonsExport ($) {
+function HeaderButtonsExport ($, Slick) {
   // register namespace
   return HeaderButtons;
 
@@ -27686,7 +27686,7 @@ function HeaderButtonsExport ($) {
 module.exports = HeaderButtonsExport;
 
 },{}],15:[function(require,module,exports){
-function HeaderMenuExport ($) {
+function HeaderMenuExport ($, Slick) {
   // register namespace
   return HeaderMenu;
 
@@ -27959,7 +27959,7 @@ function HeaderMenuExport ($) {
 module.exports = HeaderMenuExport;
 
 },{}],16:[function(require,module,exports){
-function RowMoveManagerExport ($) {
+function RowMoveManagerExport ($, Slick) {
   // register namespace
   return RowMoveManager;
 
@@ -28097,7 +28097,7 @@ function RowMoveManagerExport ($) {
 module.exports = RowMoveManagerExport;
 
 },{}],17:[function(require,module,exports){
-function RowSelectionModelExport ($) {
+function RowSelectionModelExport ($, Slick) {
   // register namespace
   return RowSelectionModel;
 
@@ -28770,7 +28770,7 @@ function SlickGridCore ($) {
 module.exports = SlickGridCore;
 
 },{}],19:[function(require,module,exports){
-function SlickGridData ($) {
+function SlickGridData ($, Slick) {
   return {
     DataView: DataView,
     Aggregators: {
@@ -34907,7 +34907,7 @@ function SlickGridExport ($, Slick) {
 module.exports = SlickGridExport;
 
 },{}],23:[function(require,module,exports){
-function SlickGridGroupItemMetadataProvider ($) {
+function SlickGridGroupItemMetadataProvider ($, Slick) {
   return GroupItemMetadataProvider;
 
 
@@ -35063,7 +35063,7 @@ function SlickGridGroupItemMetadataProvider ($) {
 module.exports = SlickGridGroupItemMetadataProvider;
 
 },{}],24:[function(require,module,exports){
-function SlickGridRemoteModel ($) {
+function SlickGridRemoteModel ($, Slick) {
   /***
    * A sample AJAX data store implementation.
    * Right now, it's hooked up to load Hackernews stories, but can
