@@ -268,4 +268,4 @@ function HeaderMenuExport ($) {
   }
 }
 
-module.exports = HeaderMenuExport(jQuery);
+module.exports = HeaderMenuExport;

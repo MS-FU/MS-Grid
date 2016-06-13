@@ -168,4 +168,4 @@ function SlickGridRemoteModel ($) {
   return RemoteModel;
 }
 
-module.exports = SlickGridRemoteModel(jQuery);
+module.exports = SlickGridRemoteModel;

@@ -479,4 +479,4 @@ function SlickGridCore ($) {
   }
 }
 
-module.exports = SlickGridCore(jQuery);
+module.exports = SlickGridCore;

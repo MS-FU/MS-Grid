@@ -1136,4 +1136,4 @@ function SlickGridData ($) {
 
 }
 
-module.exports = SlickGridData(jQuery);
+module.exports = SlickGridData;

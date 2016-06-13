@@ -81,4 +81,4 @@ function CellCopyManagerExport ($) {
   }
 }
 
-module.exports = CellCopyManagerExport(jQuery);
+module.exports = CellCopyManagerExport;

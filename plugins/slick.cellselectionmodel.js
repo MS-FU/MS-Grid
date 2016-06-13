@@ -152,4 +152,4 @@ function CellSelectionModelExport ($) {
   }
 }
 
-module.exports = CellSelectionModelExport(jQuery);
+module.exports = CellSelectionModelExport;

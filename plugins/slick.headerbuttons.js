@@ -170,4 +170,4 @@ function HeaderButtonsExport ($) {
   }
 }
 
-module.exports = HeaderButtonsExport(jQuery);
+module.exports = HeaderButtonsExport;

@@ -108,4 +108,4 @@ function CellRangeSelectorExport ($) {
   }
 }
 
-module.exports = CellRangeSelectorExport(jQuery);
+module.exports = CellRangeSelectorExport;

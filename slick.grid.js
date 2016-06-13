@@ -17,32 +17,28 @@
  *
  */
 
-require("jquery");
-require("jquery.event.drag");
-
-var Slick = require("./slick.core.js");
-
-// make sure required JavaScript modules are loaded
-if (typeof jQuery === "undefined") {
-    throw "SlickGrid requires jquery module to be loaded";
-}
-if (!jQuery.fn.drag) {
-    throw "SlickGrid requires jquery.event.drag module to be loaded";
-}
-if (typeof Slick === "undefined") {
-    throw "slick.core.js not loaded";
-}
-
-function SlickGridExport ($) {
+function SlickGridExport ($, Slick) {
     // shared across all grids on the page
     var scrollbarDimensions;
     var maxSupportedCssHeight; // browser's breaking point
+
+    if (typeof $ === "undefined") {
+        throw "SlickGrid requires jquery module to be loaded";
+    }
+    if (!$.fn.drag) {
+        throw "SlickGrid requires jquery.event.drag module to be loaded";
+    }
+    if (typeof Slick === "undefined") {
+        throw "slick.core.js not loaded";
+    }
 
     // Slick.Grid
     return SlickGrid;
 
     // ////////////////////////////////////////////////////////////////////////////////////////////
     // SlickGrid class implementation (available as Slick.Grid)
+
+    // make sure required JavaScript modules are loaded
 
     /**
      * Creates a new instance of the grid.
@@ -422,7 +418,7 @@ function SlickGridExport ($) {
                 $viewport
                     //.bind("click", handleClick)
                     .bind("scroll", handleScroll);
-                if (jQuery.fn.mousewheel && ( options.frozenColumn > -1 || hasFrozenRows )) {
+                if ($.fn.mousewheel && ( options.frozenColumn > -1 || hasFrozenRows )) {
                     $viewport
                         .bind("mousewheel", handleMouseWheel);
                 }
@@ -4305,4 +4301,4 @@ function SlickGridExport ($) {
     }
 }
 
-module.exports = SlickGridExport(jQuery);
+module.exports = SlickGridExport;

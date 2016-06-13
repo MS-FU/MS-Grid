@@ -151,4 +151,4 @@ function SlickGridGroupItemMetadataProvider ($) {
   }
 }
 
-module.exports = SlickGridGroupItemMetadataProvider(jQuery);
+module.exports = SlickGridGroupItemMetadataProvider;

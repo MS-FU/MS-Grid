@@ -78,4 +78,4 @@ function AutoTooltipsExport ($) {
   }
 }
 
-module.exports = AutoTooltipsExport(jQuery);
+module.exports = AutoTooltipsExport;

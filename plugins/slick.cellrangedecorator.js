@@ -61,4 +61,4 @@ function CellRangeDecoratorExport ($) {
   }
 }
 
-module.exports = CellRangeDecoratorExport(jQuery);
+module.exports = CellRangeDecoratorExport;

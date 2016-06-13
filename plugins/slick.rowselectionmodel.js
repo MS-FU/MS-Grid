@@ -184,4 +184,4 @@ function RowSelectionModelExport ($) {
   }
 }
 
-module.exports = RowSelectionModelExport(jQuery);
+module.exports = RowSelectionModelExport;

@@ -54,4 +54,4 @@ function SlickGridFormatters ($) {
   }
 }
 
-module.exports = SlickGridFormatters(jQuery);
+module.exports = SlickGridFormatters;

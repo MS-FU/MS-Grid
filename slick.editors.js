@@ -626,4 +626,4 @@ function SlickGridEditors ($) {
   }
 }
 
-module.exports = SlickGridEditors(jQuery);
+module.exports = SlickGridEditors;

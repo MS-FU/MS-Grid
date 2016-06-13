@@ -148,4 +148,4 @@ function CheckboxSelectColumnExport ($) {
   }
 }
 
-module.exports = CheckboxSelectColumnExport(jQuery);
+module.exports = CheckboxSelectColumnExport;

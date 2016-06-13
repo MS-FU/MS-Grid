@@ -151,4 +151,4 @@ function SlickColumnPickerExport ($) {
   return SlickColumnPicker;
 }
 
-module.exports = SlickColumnPickerExport(jQuery);
+module.exports = SlickColumnPickerExport;

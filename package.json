@@ -26,6 +26,10 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "^1.11.3",
+    "jquery-ui": "^1.10.5",
     "jquery.event.drag": "^2.2.2"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1"
   }
 }

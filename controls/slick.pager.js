@@ -146,4 +146,4 @@ function SlickGridPagerExport ($) {
   return SlickGridPager;
 }
 
-module.exports = SlickGridPagerExport(jQuery);
+module.exports = SlickGridPagerExport;

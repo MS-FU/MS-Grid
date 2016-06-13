@@ -133,4 +133,4 @@ function RowMoveManagerExport ($) {
   }
 }
 
-module.exports = RowMoveManagerExport(jQuery);
+module.exports = RowMoveManagerExport;
