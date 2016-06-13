@@ -46,12 +46,11 @@
 <script src="../lib/jquery-ui-1.11.3.min.js"></script>
 <script src="../lib/jquery.event.drag-2.2.js"></script>
 
-<script src="../slick.core.js"></script>
-<script src="../slick.grid.js"></script>
+<script src="./app.js"></script>
 
 <script>
   var gridArray;
-  
+
   function CreateColumns() {
 	  var columns = [
 		{id: "title", name: "Title", field: "title"},
@@ -92,20 +91,20 @@
     }
 	return data;
   }
-  
+
   function CreateGrid(elementId) {
     if (!gridArray) { gridArray = []; }
-	
+
 	var data = CreateData();
     var grid = new Slick.Grid("#" + elementId, data, CreateColumns(), CreateOptions());
-	
+
 	gridArray[length] = grid;
   }
-  
+
   $(function () {
 	// take care of jqueryui tabs and adding tab
-    $( "div#tabs" ).tabs();	
- 
+    $( "div#tabs" ).tabs();
+
     $("button#add-tab").click(function() {
         var num_tabs = $("div#tabs ul li").length + 1;
 

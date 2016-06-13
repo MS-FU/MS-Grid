@@ -1,10 +1,6 @@
-(function ($) {
+function CellCopyManagerExport ($, Slick) {
   // register namespace
-  $.extend(true, window, {
-    "Slick": {
-      "CellCopyManager": CellCopyManager
-    }
-  });
+  return CellCopyManager;
 
 
   function CellCopyManager() {
@@ -83,4 +79,6 @@
       "onPasteCells": new Slick.Event()
     });
   }
-})(jQuery);
+}
+
+module.exports = CellCopyManagerExport;

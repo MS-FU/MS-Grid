@@ -1,12 +1,6 @@
-(function ($) {
+function HeaderMenuExport ($, Slick) {
   // register namespace
-  $.extend(true, window, {
-    "Slick": {
-      "Plugins": {
-        "HeaderMenu": HeaderMenu
-      }
-    }
-  });
+  return HeaderMenu;
 
 
   /***
@@ -272,4 +266,6 @@
       "onCommand": new Slick.Event()
     });
   }
-})(jQuery);
+}
+
+module.exports = HeaderMenuExport;

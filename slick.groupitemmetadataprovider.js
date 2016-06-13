@@ -1,11 +1,5 @@
-(function ($) {
-  $.extend(true, window, {
-    Slick: {
-      Data: {
-        GroupItemMetadataProvider: GroupItemMetadataProvider
-      }
-    }
-  });
+function SlickGridGroupItemMetadataProvider ($, Slick) {
+  return GroupItemMetadataProvider;
 
 
   /***
@@ -155,4 +149,6 @@
       "getTotalsRowMetadata": getTotalsRowMetadata
     };
   }
-})(jQuery);
+}
+
+module.exports = SlickGridGroupItemMetadataProvider;

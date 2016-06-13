@@ -1,0 +1,35 @@
+{
+  "name": "MS-Grid",
+  "version": "1.0.0",
+  "description": "Forked repository for Slick Grid",
+  "private": true,
+  "scripts": {
+    "build": "browserify ./main.js > ./build/ms.grid.js && browserify ./examples/example-adapter.js > ./examples/app.js"
+  },
+  "keywords": [],
+  "author": "Ben McIntyre",
+  "main": "./main.js",
+  "contributors": [
+    {
+      "name": "Fredy Urrego",
+      "email": "Fredy.Urrego@morningstar.com"
+    },
+    {
+      "name": "Luis Delgado",
+      "email": "Luis.Delgado@morningstar.com"
+    },
+    {
+      "name": "Daniel Daza",
+      "email": "Daniel.Daza@morningstar.com"
+    }
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^1.11.3",
+    "jquery-ui": "^1.10.5",
+    "jquery.event.drag": "^2.2.2"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1"
+  }
+}

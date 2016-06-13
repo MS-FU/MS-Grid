@@ -4,46 +4,7 @@
  * @namespace Slick
  */
 
-(function ($) {
-  // register namespace
-  $.extend(true, window, {
-    "Slick": {
-      "Event": Event,
-      "EventData": EventData,
-      "EventHandler": EventHandler,
-      "Range": Range,
-      "NonDataRow": NonDataItem,
-      "Group": Group,
-      "GroupTotals": GroupTotals,
-      "EditorLock": EditorLock,
-
-      /***
-       * A global singleton editor lock.
-       * @class GlobalEditorLock
-       * @static
-       * @constructor
-       */
-      "GlobalEditorLock": new EditorLock(),
-
-      "keyCode": {
-        BACKSPACE: 8,
-        DELETE: 46,
-        DOWN: 40,
-        END: 35,
-        ENTER: 13,
-        ESCAPE: 27,
-        HOME: 36,
-        INSERT: 45,
-        LEFT: 37,
-        PAGE_DOWN: 34,
-        PAGE_UP: 33,
-        RIGHT: 39,
-        TAB: 9,
-        UP: 38
-      }
-    }
-  });
-
+function SlickGridCore ($) {
   /***
    * An event object for passing data to event handlers and letting them control propagation.
    * <p>This is pretty much identical to how W3C and jQuery implement events.</p>
@@ -86,7 +47,7 @@
      */
     this.isImmediatePropagationStopped = function () {
       return isImmediatePropagationStopped;
-    }
+    };
   }
 
   /***
@@ -182,7 +143,7 @@
       handlers = [];
 
       return this;  // allow chaining
-    }
+    };
   }
 
   /***
@@ -266,7 +227,7 @@
       else {
         return "(" + this.fromRow + ":" + this.fromCell + " - " + this.toRow + ":" + this.toCell + ")";
       }
-    }
+    };
   }
 
 
@@ -479,6 +440,43 @@
       return (activeEditController ? activeEditController.cancelCurrentEdit() : true);
     };
   }
-})(jQuery);
 
+  // register namespace
+  return {
+    "Event": Event,
+    "EventData": EventData,
+    "EventHandler": EventHandler,
+    "Range": Range,
+    "NonDataRow": NonDataItem,
+    "Group": Group,
+    "GroupTotals": GroupTotals,
+    "EditorLock": EditorLock,
 
+    /***
+     * A global singleton editor lock.
+     * @class GlobalEditorLock
+     * @static
+     * @constructor
+     */
+    "GlobalEditorLock": new EditorLock(),
+
+    "keyCode": {
+      BACKSPACE: 8,
+      DELETE: 46,
+      DOWN: 40,
+      END: 35,
+      ENTER: 13,
+      ESCAPE: 27,
+      HOME: 36,
+      INSERT: 45,
+      LEFT: 37,
+      PAGE_DOWN: 34,
+      PAGE_UP: 33,
+      RIGHT: 39,
+      TAB: 9,
+      UP: 38
+    }
+  };
+}
+
+module.exports = SlickGridCore;

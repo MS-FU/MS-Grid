@@ -38,8 +38,7 @@
 <script src="../lib/jquery-ui-1.11.3.min.js"></script>
 <script src="../lib/jquery.event.drag-2.2.js"></script>
 
-<script src="../slick.core.js"></script>
-<script src="../slick.grid.js"></script>
+<script src="./app.js"></script>
 
 <script>
   var grid;
@@ -71,7 +70,7 @@
     }
 	return data;
   }
-  
+
   $(function () {
     var data01 = CreateData();
     grid = new Slick.Grid("#myGrid01", data01, columns, options);

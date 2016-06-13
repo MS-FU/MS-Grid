@@ -70,13 +70,11 @@
 <script src="../lib/jquery.event.drag-2.2.js"></script>
 <script src="../lib/jquery.jsonp-2.4.min.js"></script>
 
-<script src="../slick.core.js"></script>
-<script src="../slick.remotemodel-yahoo.js"></script>
-<script src="../slick.grid.js"></script>
+<script src="./app.js"></script>
 
 <script>
   var grid;
-  var loader = new Slick.Data.RemoteModel();
+  var loader = new Slick.Data.RemoteModelYahoo();
 
   var storyTitleFormatter = function (row, cell, value, columnDef, dataContext) {
     var s ="<b><a href='" + dataContext["url"] + "' target=_blank>" +

@@ -1,0 +1,21 @@
+{
+  "name": "MS-Grid",
+  "main": "index.js",
+  "homepage": "https://github.com/MS-FU/MS-Grid",
+  "authors": [
+    "Fredy Urrego <Fredy.Urrego@morningstar.com>",
+    "Luis Delgado <Luis.Delgado@morningstar.com>",
+    "Daniel Daza <Daniel.Daza@morningstar.com>"
+  ],
+  "description": "",
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
