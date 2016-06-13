@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "Ben McIntyre",
-  "main": "./build/ms.grid.js",
+  "main": "./main.js",
   "contributors": [
     {
       "name": "Fredy Urrego",
