@@ -30557,13 +30557,6 @@ module.exports = SlickGridEditors;
  */
 
 function SlickGridFormatters ($) {
-  // register namespace
-  return {
-    "PercentComplete": PercentCompleteFormatter,
-    "PercentCompleteBar": PercentCompleteBarFormatter,
-    "YesNo": YesNoFormatter,
-    "Checkmark": CheckmarkFormatter
-  };
 
   function PercentCompleteFormatter(row, cell, value, columnDef, dataContext) {
     if (value == null || value === "") {
@@ -30600,6 +30593,14 @@ function SlickGridFormatters ($) {
   function CheckmarkFormatter(row, cell, value, columnDef, dataContext) {
     return value ? "<img src='../images/tick.png'>" : "";
   }
+
+  // register namespace
+  return {
+    "PercentComplete": PercentCompleteFormatter,
+    "PercentCompleteBar": PercentCompleteBarFormatter,
+    "YesNo": YesNoFormatter,
+    "Checkmark": CheckmarkFormatter
+  };
 }
 
 module.exports = SlickGridFormatters;
