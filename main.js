@@ -19,7 +19,7 @@ module.exports = jQuery.extend(Slick, {
   AutoTooltips: require("./plugins/slick.autotooltips.js")(jQuery),
   CellCopyManager: require("./plugins/slick.cellcopymanager.js")(jQuery, Slick),
   CellRangeDecorator: require("./plugins/slick.cellrangedecorator.js")(jQuery, Slick),
-  CellRangeSelector: require("./plugins/slick.cellrangeselector.js")(jQuery),
+  CellRangeSelector: require("./plugins/slick.cellrangeselector.js")(jQuery, Slick),
   CellSelectionModel: require("./plugins/slick.cellselectionmodel.js")(jQuery, Slick),
   CheckboxSelectColumn: require("./plugins/slick.checkboxselectcolumn.js")(jQuery, Slick),
   RowMoveManager: require("./plugins/slick.rowmovemanager.js")(jQuery, Slick),
