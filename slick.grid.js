@@ -1906,7 +1906,7 @@ function SlickGridExport ($, Slick) {
 
             var frozenRowOffset = getFrozenRowOffset(row);
 
-            var rowHtml = "<div class='ui-widget-content " + rowCss + "' style='top:"
+            var rowHtml = "<div class='ui-widget-content " + rowCss + "' data-slick-row=" + row + " style='top:"
                 + (getRowTop(row) - frozenRowOffset )
                 + "px'>";
 
