@@ -311,7 +311,7 @@ window.$ = require("jquery");
 
 },{"../main.js":4,"jquery":9}],4:[function(require,module,exports){
 var jQuery = require("jquery");
-require("jquery-mousewheel")(jQuery);
+require("jquery-mousewheel");
 require("jquery.event.drag")(jQuery);
 require("jquery-ui");
 var Slick = require("./slick.core.js")(jQuery);
