@@ -1,7 +1,7 @@
 var jQuery = require("jquery");
+require("jquery-mousewheel")(jQuery);
 require("jquery.event.drag")(jQuery);
 require("jquery-ui");
-//require("jquery-mousewheel")(jQuery);
 var Slick = require("./slick.core.js")(jQuery);
 
 module.exports = jQuery.extend(Slick, {
