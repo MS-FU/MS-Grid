@@ -307,9 +307,14 @@ module.exports = SlickGridPagerExport;
 
 },{}],3:[function(require,module,exports){
 var jQuery = require("jquery");
-require("jquery-mousewheel");
+var jQueryMW = require("jquery-mousewheel");
 require("jquery.event.drag")(jQuery);
 require("jquery-ui");
+
+if (typeof jQueryMW === "function") {
+  jQueryMW(jQuery);
+}
+
 var Slick = require("./slick.core.js")(jQuery);
 
 module.exports = jQuery.extend(Slick, {
