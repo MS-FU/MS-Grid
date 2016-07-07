@@ -415,9 +415,14 @@ function SlickGridExport ($, Slick) {
 
                 $container
                     .bind("resize.slickgrid", resizeCanvas);
+
+                /*
                 $viewport
-                    //.bind("click", handleClick)
+                    .bind("click", handleClick);
+                 */
+                $viewport
                     .bind("scroll", handleScroll);
+
                 if ($.fn.mousewheel && ( options.frozenColumn > -1 || hasFrozenRows )) {
                     $viewport
                         .bind("mousewheel", handleMouseWheel);
@@ -2679,8 +2684,8 @@ function SlickGridExport ($, Slick) {
         }
 
         function handleMouseWheel(event, delta, deltaX, deltaY) {
-            scrollTop = Math.max(0, $viewportScrollContainerY[0].scrollTop - (deltaY * options.rowHeight));
-            scrollLeft = $viewportScrollContainerX[0].scrollLeft + (deltaX * 10);
+            scrollTop = Math.max(0, $viewportScrollContainerY[0].scrollTop - deltaY);
+            scrollLeft = $viewportScrollContainerX[0].scrollLeft + deltaX;
             _handleScroll(true);
             event.preventDefault();
         }
