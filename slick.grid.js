@@ -416,6 +416,8 @@ function SlickGridExport ($, Slick) {
                 $container
                     .bind("resize.slickgrid", resizeCanvas);
 
+                $(window).on("resize", resizeCanvas);
+
                 /*
                 $viewport
                     .bind("click", handleClick);

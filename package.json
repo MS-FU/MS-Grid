@@ -1,6 +1,6 @@
 {
   "name": "MS-Grid",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Forked repository for Slick Grid",
   "private": true,
   "scripts": {
